@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-28T14:38:30Z" name="Default suite" finished-at="2024-05-28T14:39:24Z" duration-ms="53893">
+    <groups>
+      <group name="regressionTest">
+        <method signature="CreateOrganizationTest.createOrgWithIndustriesTest()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" name="createOrgWithIndustriesTest" class="com.comcast.crm.orgtest.CreateOrganizationTest"/>
+        <method signature="CreateOrganizationTest.createOrgwithPhoneNumberTest()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" name="createOrgwithPhoneNumberTest" class="com.comcast.crm.orgtest.CreateOrganizationTest"/>
+      </group> <!-- regressionTest -->
+      <group name="smokeTest">
+        <method signature="CreateOrganizationTest.createOrgTest()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" name="createOrgTest" class="com.comcast.crm.orgtest.CreateOrganizationTest"/>
+      </group> <!-- smokeTest -->
+    </groups>
+    <test started-at="2024-05-28T14:38:30Z" name="Default test" finished-at="2024-05-28T14:39:24Z" duration-ms="53893">
+      <class name="com.comcast.crm.orgtest.CreateOrganizationTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:38:30Z" name="configBS" finished-at="2024-05-28T14:38:30Z" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBS -->
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:38:30Z" name="configBC" finished-at="2024-05-28T14:38:35Z" duration-ms="4782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:38:35Z" name="configBM" finished-at="2024-05-28T14:38:45Z" duration-ms="10442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createOrgTest()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:38:45Z" name="createOrgTest" finished-at="2024-05-28T14:39:05Z" duration-ms="19463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrgTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:39:05Z" name="configAM" finished-at="2024-05-28T14:39:06Z" duration-ms="1488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:39:06Z" name="configBM" finished-at="2024-05-28T14:39:08Z" duration-ms="1936" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createOrgWithIndustriesTest()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:39:08Z" name="createOrgWithIndustriesTest" finished-at="2024-05-28T14:39:14Z" duration-ms="6124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrgWithIndustriesTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:39:14Z" name="configAM" finished-at="2024-05-28T14:39:15Z" duration-ms="902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:39:15Z" name="configBM" finished-at="2024-05-28T14:39:17Z" duration-ms="1648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createOrgwithPhoneNumberTest()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:39:17Z" name="createOrgwithPhoneNumberTest" finished-at="2024-05-28T14:39:23Z" duration-ms="5994" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrgwithPhoneNumberTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:39:23Z" name="configAM" finished-at="2024-05-28T14:39:24Z" duration-ms="902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:39:24Z" name="configAC" finished-at="2024-05-28T14:39:24Z" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@7ae42ce3]" started-at="2024-05-28T14:39:24Z" name="configAS" finished-at="2024-05-28T14:39:24Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAS -->
+      </class> <!-- com.comcast.crm.orgtest.CreateOrganizationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
