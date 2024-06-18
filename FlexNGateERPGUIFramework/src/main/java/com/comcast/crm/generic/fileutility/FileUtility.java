@@ -16,7 +16,7 @@ public class FileUtility {
 	 */
 	public String getDataFromPropertiesFile(String key) throws Throwable {
 		
-		FileInputStream fis = new FileInputStream("./configAppData/commondata.properties");
+		FileInputStream fis = new FileInputStream("./configAppData/Crmcommondata.properties");
 		Properties pObj = new Properties();
 		pObj.load(fis);
 		String data = pObj.getProperty(key);
