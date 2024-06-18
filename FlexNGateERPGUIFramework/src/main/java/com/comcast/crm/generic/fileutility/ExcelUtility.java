@@ -26,7 +26,7 @@ public class ExcelUtility {
 	 */
 	public String getDataFromExcel(String sheetName , int rowNum , int celNum) throws Throwable {
 		
-		FileInputStream fis = new FileInputStream("./testdata/testScriptdata.xlsx");
+		FileInputStream fis = new FileInputStream("./testdata/CrmtestScriptdata.xlsx");
 		Workbook wb =  WorkbookFactory.create(fis);
 	    String data = wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getStringCellValue();
 	    wb.close();
@@ -39,7 +39,7 @@ public class ExcelUtility {
 	 * @throws Throwable
 	 */
 	public int getRowcount(String sheetName ) throws Throwable {
-		FileInputStream fis = new FileInputStream("./testdata/testScriptdata.xlsx");
+		FileInputStream fis = new FileInputStream("./testdata/CrmtestScriptdata.xlsx");
 		Workbook wb =  WorkbookFactory.create(fis);
 		int rowCount = wb.getSheet(sheetName).getLastRowNum();
 		 wb.close();
@@ -55,11 +55,11 @@ public class ExcelUtility {
 	 * @throws IOException
 	 */
 	public void setDataIntoExcel(String sheetName , int rowNum , int celNum , String data) throws EncryptedDocumentException, IOException {
-		FileInputStream fis = new FileInputStream("./testdata/testScriptdata.xlsx");
+		FileInputStream fis = new FileInputStream("./testdata/CrmtestScriptdata.xlsx");
 		Workbook wb =  WorkbookFactory.create(fis);
 		wb.getSheet(sheetName).getRow(rowNum).createCell(celNum);
 		
-		FileOutputStream fos = new FileOutputStream("./testdata/testScriptdata.xlsx");
+		FileOutputStream fos = new FileOutputStream("./testdata/CrmtestScriptdata.xlsx");
 		wb.write(fos);
 		wb.close();
 	} 
@@ -76,7 +76,7 @@ public class ExcelUtility {
 	 */
 	public String getDataFromExcel(String excelPath, String sheetName, String testcaseName, String requiredKey)
 			throws EncryptedDocumentException, IOException {
-		FileInputStream fis = new FileInputStream("./testdata/testScriptdata.xlsx");
+		FileInputStream fis = new FileInputStream("./testdata/CrmtestScriptdata.xlsx");
 		Workbook wb =  WorkbookFactory.create(fis);
 		Sheet sheet = wb.getSheet(sheetName);
 		String value = "";

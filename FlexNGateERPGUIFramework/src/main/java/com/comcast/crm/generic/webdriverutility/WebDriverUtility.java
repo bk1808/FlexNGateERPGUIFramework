@@ -29,7 +29,7 @@ public class WebDriverUtility {
 	 */
 	public void waitForPageToLoad(WebDriver driver) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		
+
 	}
 	/**
 	 * Wait for element visibility in DOM document
@@ -39,9 +39,9 @@ public class WebDriverUtility {
 	public void waitForElementPresent(WebDriver driver , WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(element));
-		
+
 	}
-	
+
 	/**
 	 * wait for element until element to be active and click 
 	 * @param driver
@@ -51,16 +51,16 @@ public class WebDriverUtility {
 	public void waitandClickAjaxElement(WebDriver driver , By element) throws InterruptedException {
 		int count = 20;
 		while(count < 20) {
-		       try {
-		    	   driver.findElement(element).click();
-		       }catch (Exception e) {
-		    	   Thread.sleep(1000);
-		    	   count++;
-		    	   break;
-		       }
+			try {
+				driver.findElement(element).click();
+			}catch (Exception e) {
+				Thread.sleep(1000);
+				count++;
+				break;
+			}
 		}
 	}
-	
+
 	/**
 	 * wait for element until element to be active and type data 
 	 * @param driver
@@ -70,17 +70,17 @@ public class WebDriverUtility {
 	public void waitandTypeAjaxElement(WebDriver driver , By element, String data) throws InterruptedException {
 		int count = 20;
 		while(count < 20) {
-		       try {
-		    	   driver.findElement(element).sendKeys(data);;
-		       }catch (Exception e) {
-		    	   Thread.sleep(1000);
-		    	   count++;
-		    	   break;
-		       }
+			try {
+				driver.findElement(element).sendKeys(data);;
+			}catch (Exception e) {
+				Thread.sleep(1000);
+				count++;
+				break;
+			}
 		}
 	}
 
-	
+
 	/**
 	 * switch to New TAB based on URL
 	 * @param driver
@@ -89,11 +89,11 @@ public class WebDriverUtility {
 	public void switchToTabOnURL(WebDriver driver , String partailURL) {
 		Set<String> set =  driver.getWindowHandles();
 		Iterator<String> it =  set.iterator();
-		
+
 		while(it.hasNext()) {
 			String windowID = it.next();
 			driver.switchTo().window(windowID);
-			
+
 			String actUrl = driver.getCurrentUrl();
 			if(actUrl.contains(partailURL)) {
 				break;
@@ -108,11 +108,11 @@ public class WebDriverUtility {
 	public void switchToTabOnTitle(WebDriver driver , String partailTitle) {
 		Set<String> set =  driver.getWindowHandles();
 		Iterator<String> it =  set.iterator();
-		
+
 		while(it.hasNext()) {
 			String windowID = it.next();
 			driver.switchTo().window(windowID);
-			
+
 			String actUrl = driver.getTitle();
 			if(actUrl.contains(partailTitle)) {
 				break;
@@ -144,10 +144,10 @@ public class WebDriverUtility {
 		driver.switchTo().frame(element);
 	}
 
-   /**
-    * switch to Alert Window and accept  
-    * @param driver
-    */
+	/**
+	 * switch to Alert Window and accept  
+	 * @param driver
+	 */
 	public void switchtoAlertAndAccept(WebDriver driver) {
 		driver.switchTo().alert().accept();
 	} 
@@ -168,7 +168,7 @@ public class WebDriverUtility {
 		Select sel = new Select(element);
 		sel.selectByVisibleText(text);
 	}
-	
+
 	/**
 	 * select the value from the dropDown based on index
 	 * @param element
@@ -187,18 +187,18 @@ public class WebDriverUtility {
 	public boolean selectDynamicValue(WebElement element , String text) {
 		boolean flag = false;
 		Select sel = new Select(element);
-	   List<WebElement> lst = 	sel.getOptions();
-	   for(WebElement opt: lst ) {
-		   if(opt.getText().equals(text)) {
-			   sel.selectByVisibleText(text);
-		   }else {
-			   flag = true;
-			   break;
-		   }
-	   }
-	return flag;
+		List<WebElement> lst = 	sel.getOptions();
+		for(WebElement opt: lst ) {
+			if(opt.getText().equals(text)) {
+				sel.selectByVisibleText(text);
+			}else {
+				flag = true;
+				break;
+			}
+		}
+		return flag;
 	}
-	
+
 	/**
 	 * mouse movement on the element
 	 * @param driver
@@ -208,7 +208,7 @@ public class WebDriverUtility {
 		Actions act = new Actions(driver);
 		act.moveToElement(element).perform();
 	}
-	
+
 	/**
 	 * mouse movement on the element based on x and y location
 	 * @param driver
@@ -220,8 +220,8 @@ public class WebDriverUtility {
 		Actions act = new Actions(driver);
 		act.moveToElement(element, xLoaction, Yloaction).perform();
 	}
-	
-	
+
+
 	/**
 	 * double click on the element
 	 * @param driver
@@ -231,7 +231,7 @@ public class WebDriverUtility {
 		Actions act = new Actions(driver);
 		act.doubleClick(element).perform();
 	}
-	
+
 	/**
 	 * right click on the element
 	 * @param driver
@@ -241,7 +241,7 @@ public class WebDriverUtility {
 		Actions act = new Actions(driver);
 		act.contextClick(element).perform();
 	}
-	
+
 	/**
 	 * drag and drag the element based on source to destination location
 	 * @param driver
@@ -251,7 +251,7 @@ public class WebDriverUtility {
 		Actions act = new Actions(driver);
 		act.dragAndDrop(srcElemnet,dstElement).perform();
 	}
-	
+
 	/**
 	 * drag and drag the element based on source to destination location x and y location
 	 * @param driver
@@ -271,11 +271,19 @@ public class WebDriverUtility {
 		TakesScreenshot eDriver = (TakesScreenshot)driver;
 		File srcFile = eDriver.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(srcFile, new File("./screenshot/"+testName+".png"));
-	   
-	}
-	
-}
 
+	}
+	/**
+	 * handling file upload
+	 * 
+	 * 
+	 */
+	public void handlingFileUploadPopup(WebElement element, String path)  {
+		File f = new File(path);
+		String abspath = f.getAbsolutePath();
+		element.sendKeys(abspath);
+	}
+}
 
 
 

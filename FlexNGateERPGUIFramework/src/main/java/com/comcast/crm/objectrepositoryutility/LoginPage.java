@@ -11,7 +11,7 @@ import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 
 /**
  * 
- * @author Deepak
+ * @author Tushar Gavare
  * 
  * Contains Login page elements & business lib like login()
  *
@@ -24,13 +24,13 @@ public class LoginPage extends WebDriverUtility{                              //
 		 PageFactory.initElements(driver, this);
 	 }
 	                           
-	@FindBy(name="user_name")                        // Rule-2 Object Creation
+	@FindBy(id="username")                        // Rule-2 Object Creation
 	private WebElement usernameEdt;
 	
-	@FindBy(name="user_password")
+	@FindBy(id="password")
 	private WebElement passwordEdt;
 	
-	@FindBy(id = "submitButton")
+	@FindBy(className = "button")
 	private WebElement loginBtn;
 	     
 	
@@ -53,10 +53,10 @@ public class LoginPage extends WebDriverUtility{                              //
  * @param username
  * @param password
  */
-	 public void loginToapp(String url , String username , String password) {
-		 waitForPageToLoad(driver);
+	 public void loginToApp(String url , String username , String password) {
+	
 		 driver.get(url);	
-		// driver.manage().window().maximize();
+		 driver.manage().window().maximize();
 		 usernameEdt.sendKeys(username);
 		 passwordEdt.sendKeys(password);
 		 loginBtn.click();
