@@ -17,7 +17,7 @@ public class CreateProposalTest extends BaseClass {
 	@Test(groups = { "smokeTest" })
 	public void CreateProposalWithSourceTest() throws Throwable {
 
-		// read data from excel
+		// read data from excel sheet
 		String source = eLib.getDataFromExcel("Createthirdparty", 1, 3);
 		System.out.println(source);
 
