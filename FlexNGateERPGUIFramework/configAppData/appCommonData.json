@@ -1,6 +1,6 @@
 {
   "browser" : "firefox",
-  "url" : "http://localhost:8888",
+  "url" : "http://49.249.28.218:8889/dolibarr/",
   "username" : "admin",
   "password" : "manager",
   "timeOut" : 20

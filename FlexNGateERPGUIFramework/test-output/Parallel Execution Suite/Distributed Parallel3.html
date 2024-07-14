@@ -1,0 +1,577 @@
+<html>
+<head>
+<title>TestNG:  Distributed Parallel3</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Distributed Parallel3</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/10</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Jun 02 21:08:41 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>37 seconds (37568 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configBC()'><b>configBC</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1309353556", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1309353556'><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>-1717342721</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configBM()'><b>configBM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configAM()'><b>configAM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configAM()'><b>configAM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configBM()'><b>configBM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configBM()'><b>configBM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configAC()'><b>configAC</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configAM()'><b>configAM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configAM()'><b>configAM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configBM()'><b>configBM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configAM()'><b>configAM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configBM()'><b>configBM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configBM()'><b>configBM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configAM()'><b>configAM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configAM()'><b>configAM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configBM()'><b>configBM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configBM()'><b>configBM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configAM()'><b>configAM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configBM()'><b>configBM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configAM()'><b>configAM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configBM()'><b>configBM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.configAM()'><b>configAM</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest</td>
+<td></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.createThirdPartyWithValidInputsTest()'><b>createThirdPartyWithValidInputsTest</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest<br>Parameters: null, NA, KavyaV, Registered, Prospect, Apt. 413 8302 Twanda Ranch, Beierfurt, MI 87062-7549, 8305, Bengaluru, India, Bihar, 510620997, 18463518, def@gmail.com, www.fgh.com, 170567600, fsdfe252f, 23, 170567600, 170567600, 170567600, Other, 4 - 5, 10000003, abc, Gagan MS, Fax campaign, Draft (needs to be validated), Item4, 15003, 8, Validated (proposal is open), null</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1729656157", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1729656157'><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.createThirdPartyWithValidInputsTest()'><b>createThirdPartyWithValidInputsTest</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest<br>Parameters: null, CreateNewThirdPartyAsProspectTest, GaganMS, Registered, Prospect, Apt. 413 8302 Twanda Ranch, Beierfurt, MI 87062-7546, 8302, Bengaluru, India, Goa, 123456789, 18463515, abd@gmail.com, www.fgh.com, 170567597, fsdfd753c, 21, 170567597, 170567597, 170567597, Governmental, 1 - 5, 10000000, abc, Gagan MS, Commercial contact, Draft (needs to be validated), Item1, 15000, 5, Validated (proposal is open), null</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace729097699", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace729097699'><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.createThirdPartyWithValidInputsTest()'><b>createThirdPartyWithValidInputsTest</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest<br>Parameters: null, NA, VenkatV, Registered, Prospect, Apt. 413 8302 Twanda Ranch, Beierfurt, MI 87062-7552, 8308, Bengaluru, India, Karnataka, 897785205, 18463521, abd@gmail.com, www.fgh.com, 170567603, fsdfd753c, 59, 170567603, 170567603, 170567603, Medium company, 7 - 5, 10000006, abc, Gagan MS, Mailing campaign, Draft (needs to be validated), Item7, 15006, 11, Validated (proposal is open), null</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace910050041", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace910050041'><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.createThirdPartyWithValidInputsTest()'><b>createThirdPartyWithValidInputsTest</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest<br>Parameters: null, NA, VinayM, Registered, Prospect, Apt. 413 8302 Twanda Ranch, Beierfurt, MI 87062-7548, 8304, Bengaluru, India, Assam, 381566261, 18463517, abd@gmail.com, www.fgh.com, 170567599, fsdfd753c, 11, 170567599, 170567599, 170567599, Medium company, 3 - 5, 10000002, abc, Gagan MS, Employee, Draft (needs to be validated), Item3, 15002, 7, Validated (proposal is open), null</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1042811408", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1042811408'><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.createThirdPartyWithValidInputsTest()'><b>createThirdPartyWithValidInputsTest</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest<br>Parameters: null, NA, TusharG, Registered, Prospect, Apt. 413 8302 Twanda Ranch, Beierfurt, MI 87062-7547, 8303, Bengaluru, India, Andhra Pradesh, 252511525, 18463516, def@gmail.com, www.fgh.com, 170567598, fsdfe252f, 64, 170567598, 170567598, 170567598, Large company, 2 - 5, 10000001, abc, Gagan MS, EMailing campaign, Draft (needs to be validated), Item2, 15001, 6, Validated (proposal is open), null</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace75133488", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace75133488'><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.createThirdPartyWithValidInputsTest()'><b>createThirdPartyWithValidInputsTest</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest<br>Parameters: null, NA, DivyaPrakash, Registered, Prospect, Apt. 413 8302 Twanda Ranch, Beierfurt, MI 87062-7555, 8311, Bengaluru, India, Tamil Nadu, 128459413, 18463524, def@gmail.com, www.fgh.com, 170567606, fsdfe252f, 95, 170567606, 170567606, 170567606, Small company, 10 - 5, 10000009, abc, Gagan MS, Shop contact, Draft (needs to be validated), Item10, 15009, 14, Validated (proposal is open), null</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace237755296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace237755296'><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.createThirdPartyWithValidInputsTest()'><b>createThirdPartyWithValidInputsTest</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest<br>Parameters: null, NA, YashodhaY, Registered, Prospect, Apt. 413 8302 Twanda Ranch, Beierfurt, MI 87062-7553, 8309, Bengaluru, India, Haryana, 102683941, 18463522, def@gmail.com, www.fgh.com, 170567604, fsdfe252f, 71, 170567604, 170567604, 170567604, Other, 8 - 5, 10000007, abc, Gagan MS, Partner, Draft (needs to be validated), Item8, 15007, 12, Validated (proposal is open), null</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace342268746", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace342268746'><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.createThirdPartyWithValidInputsTest()'><b>createThirdPartyWithValidInputsTest</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest<br>Parameters: null, NA, PreethiP, Registered, Prospect, Apt. 413 8302 Twanda Ranch, Beierfurt, MI 87062-7554, 8310, Bengaluru, India, Kerala, 115584677, 18463523, abd@gmail.com, www.fgh.com, 170567605, fsdfd753c, 83, 170567605, 170567605, 170567605, Private individual, 9 - 5, 10000008, abc, Gagan MS, Phone campaign, Draft (needs to be validated), Item9, 15008, 13, Validated (proposal is open), null</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1423386299", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1423386299'><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.createThirdPartyWithValidInputsTest()'><b>createThirdPartyWithValidInputsTest</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest<br>Parameters: null, NA, PriyankaP, Registered, Prospect, Apt. 413 8302 Twanda Ranch, Beierfurt, MI 87062-7550, 8306, Bengaluru, India, Delhi, 639675733, 18463519, abd@gmail.com, www.fgh.com, 170567601, fsdfd753c, 35, 170567601, 170567601, 170567601, Private individual, 5 - 5, 10000004, abc, Gagan MS, Incoming contact of a customer, Draft (needs to be validated), Item5, 15004, 9, Validated (proposal is open), null</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1931554364", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1931554364'><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+<tr>
+<td title='com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest.createThirdPartyWithValidInputsTest()'><b>createThirdPartyWithValidInputsTest</b><br>Test class: com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest<br>Parameters: null, NA, AakashA, Registered, Prospect, Apt. 413 8302 Twanda Ranch, Beierfurt, MI 87062-7551, 8307, Bengaluru, India, Gujarat, 768730469, 18463520, def@gmail.com, www.fgh.com, 170567602, fsdfe252f, 47, 170567602, 170567602, 170567602, Small company, 6 - 5, 10000005, abc, Gagan MS, Internet, Draft (needs to be validated), Item6, 15005, 10, Validated (proposal is open), null</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1916004606", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1916004606'><pre>org.testng.TestNGException: 
+Parameter &apos;BROWSER&apos; is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\Dell\git\FlexNGateERPGUIFramework\FlexNGateERPGUIFramework\suite_distributed_parallel_test.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest@610f7aa</td></tr>
+</table><p>
+</body>
+</html>

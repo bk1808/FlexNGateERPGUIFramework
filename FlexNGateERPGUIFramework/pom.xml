@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>GUISeleniumFramework</groupId>
-  <artifactId>GUISeleniumFramework</artifactId>
+  <groupId>FlexNGateERPGUIFramework</groupId>
+  <artifactId>FlexNGateERPGUIFramework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
     <properties>
     <maven.compiler.target>1.17</maven.compiler.target>
@@ -9,75 +9,258 @@
 </properties>
 
 
-      <profiles>
-          <profile>
-               <id>FRT</id>
-                <build>
+<!-- The below is a Maven Surefire Plugin to perform batch execution using
+	pom.xml, in real time we use this plugin to run the sripts using jenkins
+In order to invoke XML suite files via POM.xml we use this plugin, we can also
+	we Maven compiler plugin
+And the profiling is implemented for all the xml suite files-->
+	<!-- ID's for suite file
+ST
+RT
+RRT
+FRT
+PT
+PDT
+CBT
+LRT-->
+
+
+	<profiles>
+		<profile>
+			<id>ST</id>
+			<build>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
-						<version>2.18.1</version>
+						<version>3.2.5</version>
 						<configuration>
 							<suiteXmlFiles>
-								<!-- TestNG suite XML files -->
-								<suiteXmlFile>suite_fullRegressionTest.xml</suiteXmlFile>
+								
+								
+								
+								<suiteXmlFile>
+									test suite (TestNG-DriverFiles)/groupExecutionXML/suite_smoketest.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
 				</plugins>
-			</build>              
-          </profile>    
-               <profile>
-               <id>ST</id>
-                <build>
+			</build>
+		</profile>
+		<profile>
+			<id>RT</id>
+			<build>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
-						<version>2.18.1</version>
+						<version>3.2.5</version>
 						<configuration>
 							<suiteXmlFiles>
-								<!-- TestNG suite XML files -->
-								<suiteXmlFile>suite_smokeTest.xml</suiteXmlFile>
+								<suiteXmlFile>
+									test suite (TestNG-DriverFiles)/groupExecutionXML/suite_regressiontest.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
 				</plugins>
-			</build>              
-          </profile> 
-           <profile>
-               <id>RRT</id>
-                <build>
+			</build>
+		</profile>
+		<profile>
+			<id>RRT</id>
+			<build>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
-						<version>2.18.1</version>
+						<version>3.2.5</version>
 						<configuration>
 							<suiteXmlFiles>
-								<!-- TestNG suite XML files -->
-								<suiteXmlFile>suite_regionalRegressionTest.xml</suiteXmlFile>
+								<suiteXmlFile>
+									test suite (TestNG-DriverFiles)/groupExecutionXML/suite_regionalregressiontest.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
 				</plugins>
-			</build>              
-          </profile> 
-      </profiles>
-  
-  
- 
-  
-   <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-	<dependency>
-	    <groupId>org.seleniumhq.selenium</groupId>
-	    <artifactId>selenium-java</artifactId>
-	    <version>4.8.3</version>
-	</dependency>
-	
-	
+			</build>
+		</profile>
+		<profile>
+			<id>FRT</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.2.5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>
+									test suite (TestNG-DriverFiles)/groupExecutionXML/suite_fullregression.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>PT</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.2.5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>
+									test suite (TestNG-DriverFiles)/parallelExecutionXML/suite_paralleltest.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>PDT</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.2.5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>
+									test suite (TestNG-DriverFiles)/distributedParallelXML/suite_parallel_distributedtest.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>CBT</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.2.5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>
+									test suite (TestNG-DriverFiles)/parallelExecutionXML/suite_crossbrowserparalleltest.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>LRT</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.2.5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>
+									test suite (TestNG-DriverFiles)/screenshotListenersSuite/suite_listenerreporttest.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<!--Selenium dependency-->
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.13.0</version>
+		</dependency>
+
+		<!--Apache Poi dependency for Excel-->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-core -->
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-core</artifactId>
+			<version>3.9.6</version>
+		</dependency>
+
+		<!--TestNG dependency for framework
+		The use of <scope> tag in the below dependancy is it can take 6 types of values
+		compile, provided, runtime, test, system and import. The scope is used to limit
+		This scope is used to limit the transitivity of a dependency, and also to affect the classpath used for various build tasks.
+		For more details refer: README-POM just below this file-->
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.7.1</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!--JSON simple dependency to read JSON file-->
+		<!--
+		https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<!--Remaining all dependency will go below --><!-- tag to write any
+		comment -->
+
+		<!--MySQL dependency to read and insert into DataBase-->
+		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>8.3.0</version>
+		</dependency>
+		<!--Extent report dependency to get the high level and low level reports-->
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.0.9</version>
+		</dependency>
+
+		<!--Project Lombok-->
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.30</version>
+			<scope>provided</scope>
+		</dependency>
+
 <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
@@ -85,73 +268,12 @@
     <version>5.8.0</version>
 </dependency>
 
-
-	<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
-<dependency>
-    <groupId>com.mysql</groupId>
-    <artifactId>mysql-connector-j</artifactId>
-    <version>8.0.33</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-<dependency>
-    <groupId>com.aventstack</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>5.0.9</version>
-</dependency>
-<dependency>
-  <groupId>org.projectlombok</groupId>
-  <artifactId>lombok</artifactId>
-  <version>1.18.22</version>
-</dependency>
-
-	<!-- https://mvnrepository.com/artifact/org.sikuli/sikuli-api -->
+<!-- https://mvnrepository.com/artifact/org.sikuli/sikuli-api -->
 <dependency>
     <groupId>org.sikuli</groupId>
     <artifactId>sikuli-api</artifactId>
     <version>1.2.0</version>
 </dependency>
 
-	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi</artifactId>
-    <version>5.2.3</version>
-</dependency>
-
-  <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
-<dependency>
-    <groupId>com.googlecode.json-simple</groupId>
-    <artifactId>json-simple</artifactId>
-    <version>1.1.1</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi</artifactId>
-    <version>4.1.2</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml</artifactId>
-    <version>4.1.2</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>6.14.3</version>
-</dependency>
-
-<dependency>
-    <groupId>commons-io</groupId>
-    <artifactId>commons-io</artifactId>
-    <version>2.13.0</version>
-</dependency>
-
-
-  </dependencies>
+	</dependencies>
 </project>

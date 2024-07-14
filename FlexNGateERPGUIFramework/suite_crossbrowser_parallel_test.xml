@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Suite">
+<listeners>
+<listener class-name="com.flexngate.erp.generic.listenerutility.ListImpClass">
+</listener>
+</listeners>
+	<parameter name="BROWSER" value="chrome"></parameter>
+	<test name="Test-1">
+		<classes>
+			<class name="com.flexngate.erp.proposal.CreateNewProposalTest" />
+			<class
+				name="com.flexngate.erp.thirdparties.CreateNewThirdPartyTest" />
+			<class name="com.flexngate.erp.prospects.CreateNewProspectTest" />
+			<class name="com.flexngate.erp.salesorder.CreateNewOrderTest" />
+			<class
+				name="com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest" />
+			<class
+				name="com.flexngate.erp.thirdparties.CreateNewCustomerTest" />
+		</classes>
+	</test>
+	<parameter name="BROWSER" value="firefox"></parameter>
+	<test name="Test-2">
+		<classes>
+			<class name="com.flexngate.erp.proposal.CreateNewProposalTest" />
+			<class
+				name="com.flexngate.erp.thirdparties.CreateNewThirdPartyTest" />
+			<class name="com.flexngate.erp.prospects.CreateNewProspectTest" />
+			<class name="com.flexngate.erp.salesorder.CreateNewOrderTest" />
+			<class
+				name="com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest" />
+			<class
+				name="com.flexngate.erp.thirdparties.CreateNewCustomerTest" />
+		</classes>
+	</test>
+	<parameter name="BROWSER" value="edge"></parameter>
+	<test name="Test-3">
+		<classes>
+			<class name="com.flexngate.erp.proposal.CreateNewProposalTest" />
+			<class
+				name="com.flexngate.erp.thirdparties.CreateNewThirdPartyTest" />
+			<class name="com.flexngate.erp.prospects.CreateNewProspectTest" />
+			<class name="com.flexngate.erp.salesorder.CreateNewOrderTest" />
+			<class
+				name="com.flexngate.erp.thirdparties.CreateThirdPartyWithAllDetailsTest" />
+			<class
+				name="com.flexngate.erp.thirdparties.CreateNewCustomerTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
