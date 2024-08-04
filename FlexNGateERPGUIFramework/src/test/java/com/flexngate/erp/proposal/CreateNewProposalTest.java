@@ -1,6 +1,7 @@
 package com.flexngate.erp.proposal;
 
 import org.openqa.selenium.Keys;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -70,7 +71,7 @@ public class CreateNewProposalTest extends BaseClass {
 			String profID4, String profID5, String vatID, String tpType, String workforce, String capital,
 			String parentCo, String assignedTo, String tpSource, String testCaseStatus, String item, String unitPrice,
 			String discount, String proposalValidate, String status) {
-
+		
 		int random = jLib.getRandomNumber();
 		String expectedDraftTitle = testCaseStatus;
 		

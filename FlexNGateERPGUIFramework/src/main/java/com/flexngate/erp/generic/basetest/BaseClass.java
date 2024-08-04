@@ -9,6 +9,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.manager.SeleniumManager;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -51,8 +52,7 @@ public class BaseClass {
 	    public void configBC(/*String browser*/) throws Throwable {
 	  
 	    System.out.println("==Launch the BROWSER==");
-	    	
-	    
+	   
 	    //String BROWSER	= fLib.getDataFromPropertiesFile("browser");
 	    String BROWSER = System.getProperty("browser" , fLib.getDataFromPropertiesFile("browser"));
 		if(BROWSER.equals("chrome")) {
